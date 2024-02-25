@@ -1,26 +1,30 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+	<a-config-provider
+		:theme="{
+			token: {
+				colorPrimary: '#E5573D',
+			},
+		}"
+	>
+		<router-view />
+	</a-config-provider>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+	// import { theme } from 'ant-design-vue';
+	export default {
+		name: 'App',
+		setup() {
+			// debounce
+			// function debounce(func) {
+			// 	var timer;
+			// 	return function (event) {
+			// 		if (timer) clearTimeout(timer);
+			// 		timer = setTimeout(func, 100, event);
+			// 	};
+			// }
+		},
+	};
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<style lang="scss"></style>

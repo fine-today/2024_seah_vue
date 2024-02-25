@@ -1,0 +1,31 @@
+html {
+	height: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+body {
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	@include color(background-color, black);
+	line-height: 1.6;
+	letter-spacing: 0;
+	font-family: 'Pretendard', 'Noto Sans KR', Arial, 'Apple SD Gothic Neo', 'Malgun Gothic', '맑은 고딕', 'Nanum Gothic', Dotum, '돋움', Helvetica, sans-serif;
+}
+#app {
+	height: 100%;
+}
+.container {
+	width: 100%;
+	max-width: 767px;
+	height: 100%;
+	margin: 0 auto;
+	@include color(background-color, white);
+	.header {
+	}
+}
+@include mobile {
+	.container {
+		min-width: 100%;
+		font-size: 4.172vw;
+	}
+}

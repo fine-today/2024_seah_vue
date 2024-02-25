@@ -1,0 +1,62 @@
+.container#login {
+	padding: 1.38rem 1.5rem;
+	@include bg_img('@/assets/images/login/loginBg.png', cover);
+}
+h1.logo {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.25rem;
+	svg {
+		width: 8rem;
+		height: 1.19rem;
+	}
+	.sub-title {
+		font-size: 0.75rem;
+		font-weight: 500;
+		@include color(color, baseGray);
+	}
+}
+header {
+	margin-bottom: 1.5rem;
+}
+.ant-tabs-nav {
+}
+.ant-tabs-nav-wrap,
+.ant-tabs-nav-list {
+	width: 100%;
+	gap: 0;
+}
+.ant-tabs-nav-list {
+	width: 100%;
+	gap: 0;
+	border-radius: 10rem;
+	border-width: 0.125rem;
+	border-style: solid;
+	@include color(border-color, white);
+	.ant-tabs-tab {
+		flex: 1;
+		position: relative;
+		justify-content: center;
+		height: 3.25rem;
+		&-btn {
+			font-size: 0.875rem;
+			font-weight: 500;
+			@include color(color, baseGray);
+		}
+	}
+	.ant-tabs-ink-bar.ant-tabs-ink-bar-animated {
+		height: 100%;
+		background-color: transparent;
+		z-index: -1;
+		&::before {
+			position: absolute;
+			content: '';
+			width: 100%;
+			height: 100%;
+			// background-color: rgba(0, 0, 0, 0.5);
+			border-radius: 10rem;
+			@include color(background-color, white);
+		}
+	}
+}
