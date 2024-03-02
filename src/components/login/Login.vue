@@ -14,13 +14,13 @@
 				</a-tab-pane>
 			</a-tabs> -->
 				<a-tab-pane key="1" tab="운전자">
-					<LoginContainer name="운전자" />
+					<LoginContainer num="1" />
 				</a-tab-pane>
 				<a-tab-pane key="2" tab="업체" force-render>
-					<LoginContainer name="업체" />
+					<LoginContainer num="2" />
 				</a-tab-pane>
 				<a-tab-pane key="3" tab="직원">
-					<LoginContainer name="직원" />
+					<LoginContainer num="3" />
 				</a-tab-pane>
 			</a-tabs>
 			<!-- tabs End -->
@@ -38,27 +38,11 @@
 		name: 'App',
 		setup() {
 			const activeKey = ref('1');
-			const users = [
-				{
-					id: 1,
-					name: '운전자',
-				},
-				{
-					id: 2,
-					name: '업체',
-				},
-				{
-					id: 3,
-					name: '직원',
-				},
-			];
 			onUpdated(() => {
 				activeKey.value = '1';
-				console.log(activeKey.value);
 			});
 			return {
 				activeKey,
-				users,
 			};
 		},
 		components: {
