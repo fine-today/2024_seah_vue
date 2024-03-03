@@ -82,17 +82,19 @@
 
 $colors: (
 	type1: (
-		black: #333,
+		black: #000,
 		white: #fff,
 		baseGray: #48535a,
 		baseOrange: #e5573d,
+		customOrange: #ff933b,
 		gray_fe: #e5573d,
 	),
 	dark: (
-		black: #333,
+		black: #000,
 		white: #fff,
 		baseGray: #48535a,
 		baseOrange: #999,
+		customOrange: #ff933b,
 		gray_fe: #e5573d,
 	),
 );

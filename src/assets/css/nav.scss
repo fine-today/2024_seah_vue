@@ -1,0 +1,100 @@
+#nav .container {
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+}
+.nav-content {
+}
+.header-box {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 3.125rem;
+	&.header-logo-box {
+		@include color(background-color, white);
+		.back-btn {
+			svg path {
+				@include color(fill, baseGray);
+			}
+		}
+		.logo {
+			svg {
+				width: 6.75rem;
+				height: 2rem;
+			}
+		}
+	}
+	&.header-title-box {
+		height: 2.5rem;
+		@include color(background-color, baseGray);
+		.home-btn {
+			svg path {
+				@include color(fill, white);
+			}
+		}
+		.title {
+			font-size: 1rem;
+			@include color(color, white);
+		}
+		.search-btn {
+			svg path {
+				@include color(fill, white);
+			}
+		}
+	}
+}
+.nav-content {
+	.ant-menu {
+		.ant-menu-submenu {
+			&-title {
+				height: 2.5rem;
+			}
+		}
+	}
+}
+.ant-menu-inline .ant-menu-sub.ant-menu-inline > .ant-menu-submenu > .ant-menu-submenu-title,
+.ant-menu-inline .ant-menu-item {
+	height: 2.5rem;
+}
+.ant-menu-inline.ant-menu-root .ant-menu-item > .ant-menu-title-content,
+.ant-menu-inline.ant-menu-root .ant-menu-submenu-title > .ant-menu-title-content {
+	white-space: pre-wrap;
+}
+.ant-menu-title-content {
+	font-size: 0.75rem;
+	padding-right: 1rem;
+}
+#menu .ant-menu-item-only-child {
+	.favorite {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 2.5rem;
+		height: 2.5rem;
+		svg {
+			width: 1rem;
+			height: 1rem;
+			path {
+				@include color(fill, customOrange);
+			}
+		}
+	}
+	// &[favorite='true'] .favorite {
+	// 	svg path {
+	// 		@include color(fill, baseOrange);
+	// 	}
+	// }
+}
+.nav-footer {
+	display: flex;
+	align-items: center;
+	.ant-btn {
+		flex: 1;
+		height: 3.25rem;
+		border-radius: 0;
+		> span {
+			font-weight: 600;
+			font-size: 1rem;
+			@include color(color, white);
+		}
+	}
+}

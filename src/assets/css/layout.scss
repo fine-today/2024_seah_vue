@@ -10,22 +10,52 @@ body {
 	@include color(background-color, black);
 	line-height: 1.6;
 	letter-spacing: 0;
+	@include color(color, baseGray);
 }
-#app {
-	height: 100%;
-}
+
 .container {
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	grid-template-areas: 'header' 'content' 'footer';
+	position: relative;
+	overflow: hidden;
+	/* nav가 밀고 나올때 쓰는 코드
+	grid-template-columns: 1fr auto;
+	grid-template-rows: auto 1fr auto;
+	grid-template-areas:
+		'header nav'
+		'content  nav'
+		'footer nav';*/
 	width: 100%;
 	max-width: 767px;
-	height: 100%;
+	height: auto;
+	min-height: 100vh;
 	margin: 0 auto;
 	@include color(background-color, white);
-	.header {
+	#header {
+		grid-area: header;
+	}
+	#content {
+		grid-area: content;
+		overflow-x: hidden;
+		overflow-y: auto;
+		padding: 1.75rem 1.25rem;
+	}
+	> #footer {
+		grid-area: footer;
+	}
+	#nav {
+		position: absolute;
+		right: -100%;
+		width: 100%;
+		grid-area: nav;
+		transition: right 0.3s;
+	}
+	&[data-nav='true'] {
+		#nav {
+			right: 0;
+		}
 	}
 }
-@include mobile {
-	.container {
-		min-width: 100%;
-		font-size: 4.172vw;
-	}
-}
+
+/* Base*/

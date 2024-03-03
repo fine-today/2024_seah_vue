@@ -2,7 +2,7 @@
 	<a-config-provider
 		:theme="{
 			token: {
-				colorPrimary: '#E5573D',
+				colorPrimary: '#48535a',
 			},
 		}"
 	>
@@ -27,4 +27,7 @@
 	};
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+	@import '@/assets/css/reset.scss';
+	@import '@/assets/css/common.scss';
+</style>

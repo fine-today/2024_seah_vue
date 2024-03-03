@@ -24,6 +24,9 @@
 				</a-tab-pane>
 			</a-tabs>
 			<!-- tabs End -->
+			<footer>
+				<span class="copyright">Copyright©2017 by SeAH Besteel Corp. All rights reserved</span>
+			</footer>
 		</template>
 	</BaseLayout>
 </template>
@@ -53,5 +56,5 @@
 	};
 </script>
 <style lang="scss">
-	@import '@/assets/css/login.scss';
+	@import '@/assets/css/page/login.scss';
 </style>

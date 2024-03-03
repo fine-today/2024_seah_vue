@@ -7,10 +7,9 @@ module.exports = {
 	css: {
 		loaderOptions: {
 			scss: {
-				additionalData: `
-        @import '@/assets/css/reset.scss';
+				additionalData: ` 
         @import '@/assets/css/mixin.scss';
-        @import '@/assets/css/common.scss';
+        
         `,
 			},
 		},

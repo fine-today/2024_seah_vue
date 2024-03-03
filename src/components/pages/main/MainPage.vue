@@ -1,11 +1,11 @@
 <template lang="">
-	<BaseLayout> </BaseLayout>
+	<MainLayout> </MainLayout>
 </template>
 <script>
-	import BaseLayout from '@/components/layout/BaseLayout.vue';
+	import MainLayout from '@/components/layout/MainLayout.vue';
 	export default {
 		components: {
-			BaseLayout,
+			MainLayout,
 		},
 	};
 </script>

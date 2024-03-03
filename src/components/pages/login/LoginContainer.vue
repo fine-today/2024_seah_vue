@@ -1,9 +1,11 @@
 <template lang="">
 	<div class="login-con-wrap">
 		<i class="user-icon">
-			<User1Img v-if="num === '1'" />
-			<User2Img v-else-if="num === '2'" />
-			<User3Img v-else-if="num === '3'" />
+			<IconWrapper>
+				<User1Img v-if="num === '1'" />
+				<User2Img v-else-if="num === '2'" />
+				<User3Img v-else-if="num === '3'" />
+			</IconWrapper>
 		</i>
 		<div class="login-con">
 			<h2 class="login-con-title">
@@ -14,14 +16,14 @@
 				<div class="list-wrap">
 					<h3 class="input-title">아이디</h3>
 					<div class="input-wrap">
-						<i class="input-icon"><IdImg /></i>
+						<IconWrapper class="input-icon"><IdImg /></IconWrapper>
 						<a-input v-model:value="value" size="large" placeholder="아이디" />
 					</div>
 				</div>
 				<div class="list-wrap">
 					<h3 class="input-title">패스워드</h3>
 					<div class="input-wrap">
-						<i class="input-icon icons"><PasswordImg /></i>
+						<IconWrapper class="input-icon"><PasswordImg /></IconWrapper>
 						<a-input-password v-model:value="value" size="large" :visibility-toggle="false" placeholder="패스워드" />
 					</div>
 				</div>
@@ -35,12 +37,12 @@
 				</span>
 				<span class="save-item">
 					<a-switch v-model:checked="checked2" id="checked2" />
-					<label @click="onCheckClick" for="checked1">자동로그인</label>
+					<label @click="onCheckClick" for="checked2">자동로그인</label>
 				</span>
 			</div>
 
 			<div class="login-btn-wrap">
-				<a-button type="primary" size="large">Download </a-button>
+				<a-button type="primary" size="large" danger>로그인 </a-button>
 			</div>
 		</div>
 	</div>
@@ -48,11 +50,12 @@
 <script>
 	import { ref, reactive } from 'vue';
 
-	import User1Img from '@/assets/images/login/User1Img.vue';
-	import User2Img from '@/assets/images/login/User2Img.vue';
-	import User3Img from '@/assets/images/login/User3Img.vue';
+	import User1Img from '@/components/images/login/User1Img.vue';
+	import User2Img from '@/components/images/login/User2Img.vue';
+	import User3Img from '@/components/images/login/User3Img.vue';
 	import IdImg from '@/components/images/login/IdImg.vue';
 	import PasswordImg from '@/components/images/login/PasswordImg.vue';
+	import IconWrapper from '@/components/common/IconWrapper.vue';
 
 	export default {
 		name: 'LoginContainer',
@@ -103,6 +106,7 @@
 			User3Img,
 			IdImg,
 			PasswordImg,
+			IconWrapper,
 		},
 	};
 </script>

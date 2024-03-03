@@ -1,7 +1,8 @@
 // import * as Vue from 'vue';
 import { createRouter, createWebHistory } from 'vue-router';
-import Login from '@/components/login/Login.vue';
-import MainLayout from '@/components/layout/MainLayout.vue';
+import Login from '@/components/pages/login/Login.vue';
+import MainPage from '@/components/pages/main/MainPage.vue';
+import DeliveryInfo from '@/components/pages/sub/delivery/DeliveryInfo.vue';
 
 // Vue.use(VueRouter);
 
@@ -20,7 +21,12 @@ export const router = createRouter({
 		{
 			path: '/main',
 			name: 'main',
-			component: MainLayout,
+			component: MainPage,
+		},
+		{
+			path: '/sub/delivery',
+			name: 'delivery',
+			component: DeliveryInfo,
 		},
 	],
 });

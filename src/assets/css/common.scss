@@ -73,3 +73,117 @@
 	display: none;
 	content: '';
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-bottom: 0 !important;
+}
+
+.flex {
+	display: flex !important;
+	align-items: center !important;
+	width: 100%;
+	> * {
+		flex: 1;
+	}
+}
+
+/* Button Custom */
+.ant-btn-primary.ant-btn-dangerous {
+	@include color(background-color, baseOrange);
+}
+.ant-picker {
+	.ant-picker-input > input {
+		font-size: 0.75rem;
+	}
+	.ant-picker-suffix .anticon-calendar svg {
+		width: 0.75rem;
+		height: 0.75rem;
+	}
+}
+.ant-input-search .ant-input-lg {
+	font-size: 0.75rem;
+	line-height: 1rem;
+}
+.ant-input-group-addon:last-child {
+	position: relative;
+	height: 100%;
+	.ant-input-search-button {
+		height: 1.54rem !important;
+		width: 1.5rem;
+		padding: 0.25rem;
+	}
+}
+.ant-input-lg {
+	padding: 0.25rem 0.75rem !important;
+}
+
+/* Modal Custom */
+.ant-modal {
+	width: calc(100% - 1.125rem);
+	max-width: 727px;
+	.ant-modal-content {
+		padding: 0.8rem 1rem;
+		.ant-modal-title {
+			font-size: 1rem;
+			@include color(color, baseGray);
+			font-weight: 400;
+			padding-bottom: 0.25rem;
+		}
+		.ant-btn {
+			font-size: 0.75rem;
+			height: auto;
+		}
+		.ant-modal-close {
+			width: 1rem;
+			height: 1rem;
+			top: 1rem;
+			right: 1rem;
+		}
+		.ant-modal-footer {
+			display: flex;
+			align-items: center;
+			> * {
+				flex: 1;
+			}
+			button {
+				height: auto;
+				font-size: 0.75rem;
+			}
+		}
+	}
+}
+[class^='ant-modal'] {
+	.ant-modal-close-x {
+		width: 1rem;
+		height: 1rem;
+
+		span {
+			width: 1rem;
+			height: 1rem;
+			svg {
+				width: 1rem;
+				height: 1rem;
+				path {
+					@include color(fill, black);
+				}
+			}
+		}
+	}
+}
+
+/* description */
+.ant-descriptions.ant-descriptions-bordered .ant-descriptions-item-label,
+.ant-descriptions.ant-descriptions-bordered .ant-descriptions-item-content {
+	padding: 0.5rem;
+}
+.ant-descriptions.ant-descriptions-bordered .ant-descriptions-item-label span {
+	font-size: 0.75rem;
+}
+.ant-descriptions.ant-descriptions-bordered .ant-descriptions-item-label {
+	vertical-align: middle;
+}
