@@ -24,6 +24,9 @@ yarn build
 yarn lint
 ```
 
-### Customize configuration
+## Pages
 
-See [Configuration Reference](https://cli.vuejs.org/config/).
+```
+http://localhost:8080/login
+http://localhost:8080/sub/delivery
+```
